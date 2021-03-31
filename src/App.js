@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
+import { getMovies } from './services/fakeMovieService';
+import Movies from './components/movies';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return <Movies />;
+  }
 }
+
+// --- 1) Have movies state
+// 2) Have count state that alters message
+// 3) If count is zero message changes...
+// --- 4) Render bootstrap table
+// --- 5) Treat table rows as list, map through to render
+// 5) Add button that alters movies state
 
 export default App;
